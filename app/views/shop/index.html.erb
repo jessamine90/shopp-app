@@ -1,0 +1,10 @@
+<h1>Sklepik z marzeniami. Zapraszam!</h1>
+
+<h2>Produkty</h2>
+<table>
+<% @products.each do |product| %>
+	<tr>
+		<td><%= link_to "#{product.name}", product %></td>
+	</tr>
+<% end %>
+</table>
