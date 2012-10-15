@@ -1,5 +1,5 @@
 class ShopController < ActionController::Base
 	def index
-		@products = Product.all
+		@product = Product.all
 	end
 end
