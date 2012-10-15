@@ -1,0 +1,10 @@
+<h1><%= @category.name %></h1>
+<table>
+	<% @products.each do |product| %>
+		<tr>
+			<td><%= link_to "#{product.name}", product %></td>
+		</tr>
+	<% end %>
+</table>
+
+<p><%= link_to 'powrot', :back %></p>

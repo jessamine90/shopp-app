@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Category.create :name => "Slodkosci"
+Category.create :name => "Slicznosci"
+
+Product.create :name => "dropsy", :description => "mniam mniam mniam", :price => 1999, :category_id => 1
+Product.create :name => "mordoklejki", :description => "mmmmmm mniam", :price => 2599, :category_id => 1
