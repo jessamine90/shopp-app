@@ -1500,3 +1500,263 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:19:08 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-15 22:20:44 +0200
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:20:44 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:20:44 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:20:44 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:20:44 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-15 22:21:53 +0200
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:21:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:21:53 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:21:53 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:21:53 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-15 22:28:56 +0200
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (2.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:28:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:28:56 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:28:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:28:56 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-15 22:34:01 +0200
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:34:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:34:01 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:34:01 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:34:01 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2012-10-15 22:34:02 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered products/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:34:02 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:34:02 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:34:02 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:34:02 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-15 22:41:56 +0200
+Processing by ShopController#index as HTML
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 19ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:41:56 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:41:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-15 22:42:36 +0200
+Connecting to database specified by database.yml
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 354ms (Views: 200.0ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-15 22:42:38 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-15 22:42:38 +0200
+Served asset /jquery.js - 304 Not Modified (45ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-15 22:42:38 +0200
+Served asset /application.js - 304 Not Modified (59ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-15 22:42:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-18 10:01:18 +0200
+Connecting to database specified by database.yml
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (56.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mEXPLAIN (1.0ms)[0m  EXPLAIN SELECT "products".* FROM "products" 
+EXPLAIN for: SELECT "products".* FROM "products" 
+                         QUERY PLAN
+-------------------------------------------------------------
+ Seq Scan on products  (cost=0.00..11.30 rows=130 width=576)
+(1 row)
+
+  [1m[36mCategory Load (54.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (30.0ms)
+Compiled jquery.js  (17ms)  (pid 9204)
+Compiled jquery_ujs.js  (0ms)  (pid 9204)
+Compiled application.js  (115ms)  (pid 9204)
+Completed 200 OK in 1341ms (Views: 388.0ms | ActiveRecord: 802.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:22 +0200
+Served asset /jquery.js - 200 OK (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:22 +0200
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:22 +0200
+Served asset /jquery_ujs.js - 200 OK (25ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-18 10:01:22 +0200
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2012-10-18 10:01:30 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (2.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:30 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-18 10:01:32 +0200
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:32 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:32 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2012-10-18 10:01:33 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:33 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-18 10:01:34 +0200
+Processing by ShopController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:35 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-18 10:01:35 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
