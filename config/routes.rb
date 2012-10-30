@@ -5,6 +5,14 @@ ShopApp::Application.routes.draw do
   resources :products
   resources :categories
   
+  resources :orders do
+    collection do
+      post 'finalize'
+      post 'add_item'
+      get 'confirm'
+    end
+  end
+  
   namespace :admin do
 	devise_for :admin_users
 	resources :products

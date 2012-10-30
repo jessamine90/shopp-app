@@ -2,6 +2,8 @@
 <p><b><%= @product.price/100.0 %></b></p>
 <p><%= @product.description %></p>
 
+<%= button_to "dodaj do koszyka", :controller => 'orders', :action => 'add_item', :id => @product.id %><br>
+
 <p><%= link_to 'powrot', :back %></p>
 <p><%= link_to 'strona glowna', :root %></p>
 
