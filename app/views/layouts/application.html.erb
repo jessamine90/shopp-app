@@ -8,6 +8,20 @@
 </head>
 <body>
 
+<%= search_form_for Product.search(params[:q]), :url=>search_results_path do |f| %>
+  <%= f.label( :name_cont, "nazwa") %>
+  <%= f.text_field :name_cont %>
+
+  <%= f.label( :description_cont, "opis") %>
+  <%= f.text_field :description_cont %>
+  <br>
+  <%= f.label( :price_gteq, "cena od") %>
+  <%= f.text_field :price_gteq , :style => 'width:70px;' %>
+  <%= f.label( :price_lteq, "do") %>
+  <%= f.text_field :price_lteq, :style => 'width:70px;' %>
+
+  <%= f.submit "Search" %>
+  <% end %>
 <%= yield %>
 
 </body>

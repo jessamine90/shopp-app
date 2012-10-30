@@ -1,6 +1,7 @@
 ShopApp::Application.routes.draw do
 
   root :to => "shop#index"
+  match 'search/results' => "search#results"
   resource :shop
   resources :products
   resources :categories

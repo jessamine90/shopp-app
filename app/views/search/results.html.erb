@@ -1,0 +1,7 @@
+Pasujace produkty:
+
+<% @result.each do |product| %>
+  <p><%= link_to "#{product.name}", product %></p>
+<% end %>
+
+<%= link_to 'Back to main page', root_path %>
