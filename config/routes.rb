@@ -9,9 +9,14 @@ ShopApp::Application.routes.draw do
   resources :orders do
     collection do
       post 'finalize'
-      post 'add_item'
+      post 'add_product'
       get 'confirm'
     end
+  end
+  
+  resource :cart do
+    post 'dodaj'
+	put 'complete'
   end
   
   namespace :admin do
@@ -20,5 +25,4 @@ ShopApp::Application.routes.draw do
 	resources :categories
 	root :to => "orders#index"
   end
-  
 end
