@@ -17467,3 +17467,225 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:45:47 +0100
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 17:54:00 +0100
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (188.0ms)
+Completed 200 OK in 267ms (Views: 205.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:00 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:00 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:54:00 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2012-11-05 17:54:02 +0100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = 1
+  Rendered categories/show.html.erb within layouts/application (243.0ms)
+Completed 200 OK in 260ms (Views: 250.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:54:02 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:02 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:02 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:02 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/search/results?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bdescription_cont%5D=&q%5Bprice_gteq%5D=10&q%5Bprice_lteq%5D=&commit=Search" for 127.0.0.1 at 2012-11-05 17:54:07 +0100
+Processing by SearchController#results as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "description_cont"=>"", "price_gteq"=>"10", "price_lteq"=>""}, "commit"=>"Search"}
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mProduct Load (25.0ms)[0m  SELECT "products".* FROM "products" WHERE ("products"."price" >= 10)
+  Rendered search/results.html.erb within layouts/application (273.0ms)
+Completed 200 OK in 408ms (Views: 315.0ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:54:08 +0100
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:08 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/search/results?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bdescription_cont%5D=&q%5Bprice_gteq%5D=10&q%5Bprice_lteq%5D=11&commit=Search" for 127.0.0.1 at 2012-11-05 17:54:12 +0100
+Processing by SearchController#results as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "description_cont"=>"", "price_gteq"=>"10", "price_lteq"=>"11"}, "commit"=>"Search"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE (("products"."price" >= 10 AND "products"."price" <= 11))
+  Rendered search/results.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 34ms (Views: 19.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:54:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:13 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 17:54:16 +0100
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (180.0ms)
+Completed 200 OK in 256ms (Views: 218.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:16 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:54:16 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:16 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:54:16 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/search/results?utf8=%E2%9C%93&q%5Bname_cont%5D=as&q%5Bdescription_cont%5D=&q%5Bprice_gteq%5D=&q%5Bprice_lteq%5D=&commit=Search" for 127.0.0.1 at 2012-11-05 17:55:11 +0100
+Processing by SearchController#results as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"as", "description_cont"=>"", "price_gteq"=>"", "price_lteq"=>""}, "commit"=>"Search"}
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mProduct Load (64.0ms)[0m  SELECT "products".* FROM "products" WHERE ("products"."name" ILIKE '%as%')
+  Rendered search/results.html.erb within layouts/application (128.0ms)
+Completed 200 OK in 180ms (Views: 108.0ms | ActiveRecord: 68.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:55:11 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:55:11 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:55:11 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:55:11 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-05 17:58:36 +0100
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (187.0ms)
+Completed 200 OK in 239ms (Views: 202.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:58:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:58:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:58:37 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:58:37 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/search/results?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bdescription_cont%5D=&q%5Bprice_gteq%5D=20&q%5Bprice_lteq%5D=&commit=Szukaj" for 127.0.0.1 at 2012-11-05 17:58:41 +0100
+Processing by SearchController#results as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "description_cont"=>"", "price_gteq"=>"20", "price_lteq"=>""}, "commit"=>"Szukaj"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mProduct Load (9.0ms)[0m  SELECT "products".* FROM "products" WHERE ("products"."price" >= 20)
+  Rendered search/results.html.erb within layouts/application (221.0ms)
+Completed 200 OK in 306ms (Views: 288.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:58:41 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:58:41 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:58:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:58:41 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/search/results?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bdescription_cont%5D=&q%5Bprice_gteq%5D=20&q%5Bprice_lteq%5D=&commit=Szukaj" for 127.0.0.1 at 2012-11-05 17:59:09 +0100
+Processing by SearchController#results as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "description_cont"=>"", "price_gteq"=>"20", "price_lteq"=>""}, "commit"=>"Szukaj"}
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mProduct Load (10.0ms)[0m  SELECT "products".* FROM "products" WHERE ("products"."price" >= 20)
+  Rendered search/results.html.erb within layouts/application (227.0ms)
+Completed 200 OK in 266ms (Views: 239.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 17:59:09 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-05 17:59:09 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-05 17:59:09 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-05 17:59:09 +0100
+Served asset /application.css - 304 Not Modified (0ms)

@@ -1,0 +1,10 @@
+Pasujace produkty:
+<table>
+	<% @result.each do |product| %>
+		<tr>
+			<td><%= link_to "#{product.name}", product %></td>
+		</tr>
+	<% end %>
+</table>
+</p>
+<%= link_to 'powrot', :back %>
