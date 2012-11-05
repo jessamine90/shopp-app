@@ -1,6 +1,6 @@
-<h3>Sklepik z marzeniami</h3>
+<h1>Sklepik z marzeniami. Zapraszam!</h1>
 
-Kategorie:
+<h2>Kategorie</h2>
 <table>
 	<% @categories.each do |category| %>
 		<tr>
@@ -8,12 +8,12 @@ Kategorie:
 		</tr>
 	<% end %>
 </table>
-</p>
-Produkty:
+
+<h2>Produkty</h2>
 <table>
-	<% @products.each do |product| %>
-		<tr>
-			<td><%= link_to "#{product.name}", product %></td>
-		</tr>
-	<% end %>
+<% @products.each do |product| %>
+	<tr>
+		<td><%= link_to "#{product.name}", product %></td>
+	</tr>
+<% end %>
 </table>
