@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ShopApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Sklepik z marzeniami</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
+	<h4>Wyszukiwarka:</h4>
+	<%= search_form_for Product.search(params[:q]), :url=>search_results_path do |f| %>
+		<%= f.label( :name_cont, "nazwa") %>
+		<%= f.text_field :name_cont %>
+		<%= f.label( :description_cont, "opis") %>
+		<%= f.text_field :description_cont %>
+		<br>
+		<%= f.label( :price_gteq, "cena w groszach(?) od") %>
+		<%= f.text_field :price_gteq , :style => 'width:70px;' %>
+		<%= f.label( :price_lteq, "do") %>
+		<%= f.text_field :price_lteq, :style => 'width:70px;' %>
+		<%= f.submit "Szukaj" %>
+	<% end %>
 
-  <%= search_form_for Product.search(params[:q]), :url=>search_results_path do |f| %>
-    <%= f.label( :name_cont, "nazwa") %>
-    <%= f.text_field :name_cont %>
-    <%= f.label( :description_cont, "opis") %>
-    <%= f.text_field :description_cont %>
-    <br>
-    <%= f.label( :price_gteq, "cena w groszach(?) od") %>
-    <%= f.text_field :price_gteq , :style => 'width:70px;' %>
-    <%= f.label( :price_lteq, "do") %>
-    <%= f.text_field :price_lteq, :style => 'width:70px;' %>
-    <%= f.submit "Szukaj" %>
-  <% end %>
-  </p>
-  <%= yield %>
-
+	<h4>W twoim koszyku znajduja sie:</h4>
+	<table>
+		<tr>
+			<th>przedmiot</th>
+			<th>ilosc</th>
+			<th></th>
+		</tr>
+		<% @current_cart.order_items.each do |order_item| %>
+			<tr>
+				<td><%= order_item.product.name %></td>
+				<td><%= order_item.quantity %></td>
+				<td><%= form_tag :controller => :order, :action => :delete, :id => order_item do %>
+					<%= submit_tag 'usun z koszyka' %>
+				<% end %>
+			</tr>
+		<% end %>
+		<tr>
+			<td><%= form_tag :controller => :order, :action => :checkout do %>
+				<%= submit_tag 'kup' %>
+			<% end %>
+		</tr>
+	</table>
+	</p>
+	<%= yield %>
 </body>
 </html>

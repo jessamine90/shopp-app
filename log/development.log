@@ -18021,3 +18021,2309 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-05 21:11:10 +0100
 Served asset /jquery.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 10:11:39 +0100
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (112.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mEXPLAIN (1.0ms)[0m  EXPLAIN SELECT "products".* FROM "products" 
+EXPLAIN for: SELECT "products".* FROM "products" 
+                          QUERY PLAN
+--------------------------------------------------------------
+ Seq Scan on products  (cost=0.00..43.02 rows=1002 width=227)
+(1 row)
+
+  [1m[36mCategory Load (33.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (250.0ms)
+Completed 200 OK in 1892ms (Views: 652.0ms | ActiveRecord: 942.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 10:11:42 +0100
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 10:11:42 +0100
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 10:11:42 +0100
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 10:11:42 +0100
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/products/10" for 127.0.0.1 at 2012-12-03 10:11:57 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "10"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 10:12:00 +0100
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (176.0ms)
+Completed 200 OK in 226ms (Views: 191.0ms | ActiveRecord: 8.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 12:11:14 +0100
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (9.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (204.0ms)
+Completed 200 OK in 575ms (Views: 338.0ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 12:11:15 +0100
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 12:11:15 +0100
+Served asset /application.js - 200 OK (23ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 12:11:15 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 12:11:15 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 12:19:37 +0100
+Processing by ShopController#index as HTML
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (2.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (192.0ms)
+Completed 200 OK in 299ms (Views: 207.0ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 12:19:37 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 12:19:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 12:19:37 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 12:19:37 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 12:52:31 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (164.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (60.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 1 AND "orders"."confirmed" = 'false' LIMIT 1
+PG::Error: ERROR:  column orders.confirmed does not exist
+LINE 1: ... FROM "orders"  WHERE "orders"."buyer_id" = 1 AND "orders"."...
+                                                             ^
+: SELECT  "orders".* FROM "orders"  WHERE "orders"."buyer_id" = 1 AND "orders"."confirmed" = 'false' LIMIT 1
+Completed 500 Internal Server Error in 629ms
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  column orders.confirmed does not exist
+LINE 1: ... FROM "orders"  WHERE "orders"."buyer_id" = 1 AND "orders"."...
+                                                             ^
+: SELECT  "orders".* FROM "orders"  WHERE "orders"."buyer_id" = 1 AND "orders"."confirmed" = 'false' LIMIT 1):
+  app/controllers/application_controller.rb:14:in `initialize_current_buyer'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 12:57:47 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 2 AND "orders"."confirmed" = 'false' LIMIT 1
+PG::Error: ERROR:  column orders.confirmed does not exist
+LINE 1: ... FROM "orders"  WHERE "orders"."buyer_id" = 2 AND "orders"."...
+                                                             ^
+: SELECT  "orders".* FROM "orders"  WHERE "orders"."buyer_id" = 2 AND "orders"."confirmed" = 'false' LIMIT 1
+Completed 500 Internal Server Error in 28ms
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  column orders.confirmed does not exist
+LINE 1: ... FROM "orders"  WHERE "orders"."buyer_id" = 2 AND "orders"."...
+                                                             ^
+: SELECT  "orders".* FROM "orders"  WHERE "orders"."buyer_id" = 2 AND "orders"."confirmed" = 'false' LIMIT 1):
+  app/controllers/application_controller.rb:14:in `initialize_current_buyer'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 12:57:49 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 3 AND "orders"."confirmed" = 'false' LIMIT 1
+PG::Error: ERROR:  column orders.confirmed does not exist
+LINE 1: ... FROM "orders"  WHERE "orders"."buyer_id" = 3 AND "orders"."...
+                                                             ^
+: SELECT  "orders".* FROM "orders"  WHERE "orders"."buyer_id" = 3 AND "orders"."confirmed" = 'false' LIMIT 1
+Completed 500 Internal Server Error in 4ms
+
+ActiveRecord::StatementInvalid (PG::Error: ERROR:  column orders.confirmed does not exist
+LINE 1: ... FROM "orders"  WHERE "orders"."buyer_id" = 3 AND "orders"."...
+                                                             ^
+: SELECT  "orders".* FROM "orders"  WHERE "orders"."buyer_id" = 3 AND "orders"."confirmed" = 'false' LIMIT 1):
+  app/controllers/application_controller.rb:14:in `initialize_current_buyer'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:00:34 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (31.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 4 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (22.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (62.0ms)
+Completed 500 Internal Server Error in 219ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_34448640'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_34448640'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:04:00 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 5 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_34432008'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_34432008'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:04:02 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 6 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 59ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_34432008'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_34432008'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:04:05 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 7 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_34432008'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_34432008'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:04:13 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 8 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_34432008'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_34432008'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:04:15 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 9 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (10.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 66ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_34432008'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_34432008'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:04:18 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 10 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (231.0ms)
+Completed 500 Internal Server Error in 317ms
+
+ActionView::Template::Error (Missing partial layouts/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/Aga/Desktop/Rails/shop_app/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+    10:   <%= render :partial => 'layouts/header' %>
+    11:   <div class="wrap">
+    12: 
+    13:   <%= search_form_for Product.search(params[:q]), :url=>search_results_path do |f| %>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__139617876_34461816'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:04:44 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 11 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_32772456'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_32772456'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:05:11 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (11.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (22.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 12 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 92ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_32772456'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_32772456'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:05:14 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 13 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionController::RoutingError (No route matches {:action=>"add_cart", :controller=>"shop"}):
+  app/views/shop/index.html.erb:17:in `block in _app_views_shop_index_html_erb___971001305_32772456'
+  app/views/shop/index.html.erb:14:in `each'
+  app/views/shop/index.html.erb:14:in `_app_views_shop_index_html_erb___971001305_32772456'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:05:20 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 14 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (194.0ms)
+Completed 500 Internal Server Error in 249ms
+
+ActionView::Template::Error (Missing partial layouts/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/Aga/Desktop/Rails/shop_app/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+    10:   <%= render :partial => 'layouts/header' %>
+    11:   <div class="wrap">
+    12: 
+    13:   <%= search_form_for Product.search(params[:q]), :url=>search_results_path do |f| %>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__139617876_34461816'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:22:01 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 15 AND "orders"."completed" = 'false' LIMIT 1
+Completed 500 Internal Server Error in 30ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: completed):
+  app/controllers/application_controller.rb:16:in `initialize_current_buyer'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:22:03 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 16 AND "orders"."completed" = 'false' LIMIT 1
+Completed 500 Internal Server Error in 4ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: completed):
+  app/controllers/application_controller.rb:16:in `initialize_current_buyer'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:24:09 +0100
+Processing by ShopController#index as HTML
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 17 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (108.0ms)[0m  INSERT INTO "orders" ("buyer_id", "completed", "created_at", "ordered", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["buyer_id", 17], ["completed", false], ["created_at", Mon, 03 Dec 2012 12:24:09 UTC +00:00], ["ordered", nil], ["updated_at", Mon, 03 Dec 2012 12:24:09 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (13.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (598.0ms)
+Completed 500 Internal Server Error in 841ms
+
+ActionView::Template::Error (Missing partial layouts/header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "C:/Users/Aga/Desktop/Rails/shop_app/app/views"
+  * "C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/devise-2.1.2/app/views"
+):
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+    10:   <%= render :partial => 'layouts/header' %>
+    11:   <div class="wrap">
+    12: 
+    13:   <%= search_form_for Product.search(params[:q]), :url=>search_results_path do |f| %>
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__139617876_34461816'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:27:31 +0100
+Processing by ShopController#index as HTML
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "buyers" ("address", "first_name", "last_name") VALUES ($1, $2, $3) RETURNING "id"[0m  [["address", nil], ["first_name", nil], ["last_name", nil]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "orders" ("buyer_id", "completed", "created_at", "ordered", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["buyer_id", 18], ["completed", false], ["created_at", Mon, 03 Dec 2012 12:27:32 UTC +00:00], ["ordered", nil], ["updated_at", Mon, 03 Dec 2012 12:27:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (624.0ms)
+  [1m[36mOrderItem Load (33.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 2[0m
+  Rendered layouts/_header.html.erb (45.0ms)
+Completed 200 OK in 823ms (Views: 669.0ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 13:27:32 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 13:27:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 13:27:32 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 13:27:32 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/1" for 127.0.0.1 at 2012-12-03 13:27:49 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"1"}
+  [1m[35mBuyer Load (2.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 1 AND "order_items"."order_id" = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 03 Dec 2012 12:27:49 UTC +00:00], ["order_id", 2], ["price", nil], ["product_id", 1], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 12:27:49 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:27:49 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (597.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 2[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (60.0ms)
+Completed 200 OK in 711ms (Views: 672.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 13:27:50 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 13:27:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 13:27:50 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 13:27:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/1" for 127.0.0.1 at 2012-12-03 13:27:59 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"1"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 1 AND "order_items"."order_id" = 2 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  UPDATE "order_items" SET "quantity" = 2, "updated_at" = '2012-12-03 12:27:59.243564' WHERE "order_items"."id" = 1
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:27:59 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (567.0ms)
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 2
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 647ms (Views: 609.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 13:27:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:00 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:00 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/cart/add/1" for 127.0.0.1 at 2012-12-03 13:28:00 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"1"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 1 AND "order_items"."order_id" = 2 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mUPDATE "order_items" SET "quantity" = 3, "updated_at" = '2012-12-03 12:28:00.866657' WHERE "order_items"."id" = 1[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:28:00 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (588.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 2[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 657ms (Views: 621.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 13:28:01 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:01 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:01 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:01 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/2" for 127.0.0.1 at 2012-12-03 13:28:03 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"2"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 2 AND "order_items"."order_id" = 2 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Mon, 03 Dec 2012 12:28:03 UTC +00:00], ["order_id", 2], ["price", nil], ["product_id", 2], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 12:28:03 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:28:03 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (9.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (585.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 2
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 645ms (Views: 606.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 13:28:03 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:03 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:03 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:03 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/checkout" for 127.0.0.1 at 2012-12-03 13:28:06 +0100
+Processing by OrderController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Checkout"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 2
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `confirmed=' for #<Order:0x4127418>):
+  app/controllers/order_controller.rb:26:in `checkout'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started POST "/cart/checkout" for 127.0.0.1 at 2012-12-03 13:28:27 +0100
+Processing by OrderController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Checkout"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 2
+Completed 500 Internal Server Error in 38ms
+
+NoMethodError (undefined method `confirmed=' for #<Order:0x4048cf8>):
+  app/controllers/order_controller.rb:26:in `checkout'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:28:32 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (589.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 2[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (34.0ms)
+Completed 200 OK in 719ms (Views: 636.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:33 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:33 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 13:28:33 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started POST "/cart/checkout" for 127.0.0.1 at 2012-12-03 13:28:35 +0100
+Processing by OrderController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Checkout"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 2[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `confirmed=' for #<Order:0x4060050>):
+  app/controllers/order_controller.rb:26:in `checkout'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started POST "/cart/checkout" for 127.0.0.1 at 2012-12-03 13:28:49 +0100
+Processing by OrderController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Checkout"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 2[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mUPDATE "orders" SET "completed" = 't', "updated_at" = '2012-12-03 12:28:49.488438' WHERE "orders"."id" = 2[0m
+  [1m[35m (28.0ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "orders" ("buyer_id", "completed", "created_at", "ordered", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["buyer_id", 18], ["completed", false], ["created_at", Mon, 03 Dec 2012 12:28:49 UTC +00:00], ["ordered", nil], ["updated_at", Mon, 03 Dec 2012 12:28:49 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 75ms (ActiveRecord: 42.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 13:28:49 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (587.0ms)
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 667ms (Views: 605.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 13:28:50 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:50 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 13:28:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2012-12-03 13:35:17 +0100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mProduct Load (7.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = 1
+  Rendered categories/show.html.erb (638.0ms)
+Completed 200 OK in 645ms (Views: 636.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2012-12-03 13:35:25 +0100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = 2
+  Rendered categories/show.html.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2012-12-03 13:35:28 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered products/show.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined local variable or method `product' for #<#<Class:0x4191990>:0x418fe60>):
+    1: <h1><%= @product.name %></h1>
+    2: <p><b><%= @product.price/100.0 %></b></p>
+    3: <p>
+    4: <%= form_tag :controller => :order, :action => :add, :id => product do %>
+    5: 	<%= submit_tag 'Add to cart' %>
+    6: <% end %>
+    7: </p>
+  app/views/products/show.html.erb:4:in `_app_views_products_show_html_erb__1045607848_34388328'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:02:38 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (7.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (610.0ms)
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 718ms (Views: 676.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:02:39 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:02:39 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:02:39 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:02:39 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-12-03 20:02:41 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:02:41 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:02:41 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:02:41 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:02:41 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/product" for 127.0.0.1 at 2012-12-03 20:02:43 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"product"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "product"]]
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Product with id=product):
+  app/controllers/order_controller.rb:3:in `add'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started POST "/cart/add/1" for 127.0.0.1 at 2012-12-03 20:03:04 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"1"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 1 AND "order_items"."order_id" = 3 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 03 Dec 2012 19:03:04 UTC +00:00], ["order_id", 3], ["price", nil], ["product_id", 1], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:03:04 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:03:04 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (627.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 689ms (Views: 648.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:03:04 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:03:04 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:03:05 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:03:05 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:05:43 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (602.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 683ms (Views: 622.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:05:44 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:44 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:44 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:44 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2012-12-03 20:05:48 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:05:49 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:49 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/2" for 127.0.0.1 at 2012-12-03 20:05:50 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"2"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 2 AND "order_items"."order_id" = 3 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 03 Dec 2012 19:05:50 UTC +00:00], ["order_id", 3], ["price", nil], ["product_id", 2], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:05:50 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2012-12-03 20:05:50 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:05:50 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:50 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:50 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:50 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:05:54 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (608.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 668ms (Views: 627.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:05:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:05:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:06:00 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (627.0ms)
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 690ms (Views: 648.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:06:00 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:00 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:00 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:00 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/3" for 127.0.0.1 at 2012-12-03 20:06:35 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"3"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 3 AND "order_items"."order_id" = 3 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Mon, 03 Dec 2012 19:06:35 UTC +00:00], ["order_id", 3], ["price", nil], ["product_id", 3], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:06:35 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:06:35 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (7.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (619.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (19.0ms)
+Completed 200 OK in 697ms (Views: 655.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:36 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:36 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:06:36 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:36 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/1" for 127.0.0.1 at 2012-12-03 20:06:38 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"1"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 1 AND "order_items"."order_id" = 3 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mUPDATE "order_items" SET "quantity" = 2, "updated_at" = '2012-12-03 19:06:38.621600' WHERE "order_items"."id" = 3[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:06:38 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (624.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (6.0ms)
+Completed 200 OK in 686ms (Views: 646.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:06:39 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:39 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:39 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:39 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started POST "/cart/delete/5" for 127.0.0.1 at 2012-12-03 20:06:44 +0100
+Processing by OrderController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Delete", "id"=>"5"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "order_items" WHERE "order_items"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:06:44 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (607.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 693ms (Views: 654.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:06:45 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:45 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:45 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:45 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-12-03 20:06:47 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:06:47 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:47 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started POST "/cart/add/1" for 127.0.0.1 at 2012-12-03 20:06:49 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"1"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 1 AND "order_items"."order_id" = 3 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mUPDATE "order_items" SET "quantity" = 3, "updated_at" = '2012-12-03 19:06:49.481221' WHERE "order_items"."id" = 3[0m
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 7ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-12-03 20:06:49 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (0.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 3
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:06:49 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:49 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:49 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:49 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/checkout" for 127.0.0.1 at 2012-12-03 20:06:53 +0100
+Processing by OrderController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Checkout"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 3
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  UPDATE "orders" SET "completed" = 't', "updated_at" = '2012-12-03 19:06:53.965477' WHERE "orders"."id" = 3
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "orders" ("buyer_id", "completed", "created_at", "ordered", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["buyer_id", 18], ["completed", false], ["created_at", Mon, 03 Dec 2012 19:06:53 UTC +00:00], ["ordered", nil], ["updated_at", Mon, 03 Dec 2012 19:06:53 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 10ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-12-03 20:06:53 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:06:54 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:54 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:54 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:54 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:06:58 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (634.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 692ms (Views: 651.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:59 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:06:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:59 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:06:59 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/4" for 127.0.0.1 at 2012-12-03 20:07:00 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"4"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 4 AND "order_items"."order_id" = 4 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 03 Dec 2012 19:07:00 UTC +00:00], ["order_id", 4], ["price", nil], ["product_id", 4], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:07:00 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:07:00 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (604.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 688ms (Views: 624.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:07:01 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:01 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:01 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:01 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/4" for 127.0.0.1 at 2012-12-03 20:07:02 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"4"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 4 AND "order_items"."order_id" = 4 LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  UPDATE "order_items" SET "quantity" = 2, "updated_at" = '2012-12-03 19:07:02.483965' WHERE "order_items"."id" = 6
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:07:02 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (7.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (621.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 680ms (Views: 639.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:07:03 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:03 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:03 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:03 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/5" for 127.0.0.1 at 2012-12-03 20:07:05 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"5"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 5 AND "order_items"."order_id" = 4 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 03 Dec 2012 19:07:05 UTC +00:00], ["order_id", 4], ["price", nil], ["product_id", 5], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:07:05 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:07:05 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (606.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 5 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 689ms (Views: 628.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:07:06 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:06 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:06 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:06 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/delete/6" for 127.0.0.1 at 2012-12-03 20:07:09 +0100
+Processing by OrderController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Delete", "id"=>"6"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "order_items" WHERE "order_items"."id" = $1  [["id", 6]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:07:09 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (615.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 5 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 674ms (Views: 633.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:07:09 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:09 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:09 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:09 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/cart/add/4" for 127.0.0.1 at 2012-12-03 20:07:12 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"4"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 4 AND "order_items"."order_id" = 4 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 03 Dec 2012 19:07:12 UTC +00:00], ["order_id", 4], ["price", nil], ["product_id", 4], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:07:12 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:07:12 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (38.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (608.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 5 LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 701ms (Views: 629.0ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:07:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:13 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/3" for 127.0.0.1 at 2012-12-03 20:07:15 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"3"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 3 AND "order_items"."order_id" = 4 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 03 Dec 2012 19:07:15 UTC +00:00], ["order_id", 4], ["price", nil], ["product_id", 3], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:07:15 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:07:15 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (16.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (618.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 5 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1
+  Rendered layouts/_header.html.erb (6.0ms)
+Completed 200 OK in 696ms (Views: 640.0ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:15 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:15 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:15 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:07:15 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:07:19 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (629.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 5 LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1
+  Rendered layouts/_header.html.erb (6.0ms)
+Completed 200 OK in 716ms (Views: 652.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:20 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:20 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:07:20 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:07:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:12:37 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (629.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 5 LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1
+Completed 200 OK in 692ms (Views: 651.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:12:38 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:12:38 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:12:38 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:12:38 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/cart/delete/7" for 127.0.0.1 at 2012-12-03 20:12:43 +0100
+Processing by OrderController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"usun z koszyka", "id"=>"7"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "order_items" WHERE "order_items"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:12:43 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (7.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (616.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 675ms (Views: 635.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:12:44 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:12:44 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:12:44 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:12:44 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:13:01 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (7.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (599.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1
+Completed 200 OK in 683ms (Views: 642.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:13:02 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:13:02 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:13:02 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:13:02 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:17:17 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (12.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (611.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 4 LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 683ms (Views: 632.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:17 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:17:17 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:17 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:17 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/delete/8" for 127.0.0.1 at 2012-12-03 20:17:22 +0100
+Processing by OrderController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"usun z koszyka", "id"=>"8"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1  [["id", "8"]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "order_items" WHERE "order_items"."id" = $1  [["id", 8]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:17:22 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (614.0ms)
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 697ms (Views: 657.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:23 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:17:23 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:23 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:23 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/delete/9" for 127.0.0.1 at 2012-12-03 20:17:23 +0100
+Processing by OrderController#delete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"usun z koszyka", "id"=>"9"}
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."id" = $1 LIMIT 1  [["id", "9"]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "order_items" WHERE "order_items"."id" = $1  [["id", 9]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:17:23 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (618.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+Completed 200 OK in 674ms (Views: 634.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:17:24 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:24 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:24 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:24 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/checkout" for 127.0.0.1 at 2012-12-03 20:17:26 +0100
+Processing by OrderController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"kup"}
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "order_items" WHERE "order_items"."order_id" = 4
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:17:26 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (605.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+Completed 200 OK in 687ms (Views: 646.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:17:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:27 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:17:27 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:20:36 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (7.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (632.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+Completed 200 OK in 691ms (Views: 650.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:37 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:37 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:20:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/1" for 127.0.0.1 at 2012-12-03 20:20:43 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"1"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 1 AND "order_items"."order_id" = 4 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Mon, 03 Dec 2012 19:20:43 UTC +00:00], ["order_id", 4], ["price", nil], ["product_id", 1], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:20:43 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:20:43 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (7.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (590.0ms)
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 680ms (Views: 622.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:43 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:43 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:20:43 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:43 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/cart/add/2" for 127.0.0.1 at 2012-12-03 20:20:45 +0100
+Processing by OrderController#add as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rB7FlQKEncCy7RkqdHBXS9PjQHEMngb6v6nla9apGOs=", "commit"=>"Add to cart", "id"=>"2"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."product_id" = 2 AND "order_items"."order_id" = 4 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "order_items" ("created_at", "order_id", "price", "product_id", "quantity", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Mon, 03 Dec 2012 19:20:45 UTC +00:00], ["order_id", 4], ["price", nil], ["product_id", 2], ["quantity", 1], ["updated_at", Mon, 03 Dec 2012 19:20:45 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:20:45 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (618.0ms)
+  [1m[36mOrderItem Load (0.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 704ms (Views: 664.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:20:46 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:46 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:46 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:46 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:20:58 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (7.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (1.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (613.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+Completed 200 OK in 673ms (Views: 633.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:59 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:20:59 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:59 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:20:59 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:25:40 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (1.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (10.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (621.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 686ms (Views: 643.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:25:40 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:25:40 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:25:40 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:25:40 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:26:12 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (10.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (636.0ms)
+  [1m[35mOrderItem Load (0.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+Completed 200 OK in 697ms (Views: 655.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:26:13 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:26:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:26:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:26:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:27:20 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (0.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (10.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (615.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 680ms (Views: 633.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:21 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:27:21 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2012-12-03 20:27:25 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBuyer Load (0.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:27:25 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:25 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:25 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:25 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:27:27 +0100
+Processing by ShopController#index as HTML
+  [1m[35mBuyer Load (1.0ms)[0m  SELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1  [["id", "18"]]
+  [1m[36mOrder Load (0.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1[0m
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" 
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered shop/index.html.erb within layouts/application (615.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+Completed 200 OK in 673ms (Views: 632.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:27 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:27 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:27:27 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:27 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2012-12-03 20:27:29 +0100
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mProduct Load (8.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."category_id" = 1
+  Rendered categories/show.html.erb (645.0ms)
+Completed 200 OK in 651ms (Views: 642.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2012-12-03 20:27:32 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+  [1m[35mOrderItem Load (1.0ms)[0m  SELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4
+  [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1
+Completed 200 OK in 49ms (Views: 44.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:27:32 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:32 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:32 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:32 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 20:27:36 +0100
+Processing by ShopController#index as HTML
+  [1m[36mBuyer Load (1.0ms)[0m  [1mSELECT "buyers".* FROM "buyers" WHERE "buyers"."id" = $1 LIMIT 1[0m  [["id", "18"]]
+  [1m[35mOrder Load (0.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."buyer_id" = 18 AND "orders"."completed" = 'false' LIMIT 1
+  [1m[36mProduct Load (8.0ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered shop/index.html.erb within layouts/application (613.0ms)
+  [1m[36mOrderItem Load (1.0ms)[0m  [1mSELECT "order_items".* FROM "order_items" WHERE "order_items"."order_id" = 4[0m
+  [1m[35mProduct Load (0.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = 1 LIMIT 1
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 673ms (Views: 632.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:37 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:37 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-03 20:27:37 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-03 20:27:37 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)

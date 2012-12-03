@@ -1,4 +1,4 @@
-<h3>Sklepik z marzeniami</h3>
+<h2>Sklepik z marzeniami</h2>
 
 Kategorie:
 <table>
@@ -14,6 +14,11 @@ Produkty:
 <% @products.each do |product| %>
 	<tr>
 		<td><%= link_to "#{product.name}", product %></td>
+		<td>
+		<%= form_tag :controller => :order, :action => :add, :id => product do %>
+			<%= submit_tag 'dodaj do koszyka' %>
+		<% end %>
+		</td>
 	</tr>
 <% end %>
 </table>

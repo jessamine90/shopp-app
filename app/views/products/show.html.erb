@@ -1,5 +1,10 @@
 <h1><%= @product.name %></h1>
 <p><b><%= @product.price/100.0 %></b></p>
+<p>
+<%= form_tag :controller => :order, :action => :add, :id => @product do %>
+	<%= submit_tag 'dodaj do koszyka' %>
+<% end %>
+</p>
 <p><%= @product.description %></p>
 
 <p><%= link_to 'powrot', :back %></p>

@@ -3,6 +3,11 @@
 	<% @products.each do |product| %>
 		<tr>
 			<td><%= link_to "#{product.name}", product %></td>
+			<td>
+			<%= form_tag :controller => :order, :action => :add, :id => product do %>
+				<%= submit_tag 'dodaj do koszyka' %>
+			<% end %>
+			</td>
 		</tr>
 	<% end %>
 </table>
