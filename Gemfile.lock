@@ -123,7 +123,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   faker
-  jquery-rails
+  jquery-rails (~> 2.1)
   pg
   rails (= 3.2.8)
   ransack
