@@ -1,0 +1,23 @@
+<h3>Lista zamowien</h3>
+ <table>
+	<tr>
+		<th>id zamowienia</th>
+		<th>id klienta</th>
+		<th>produkty</th>
+ 	</tr>
+	<% @orders.each do |order| %>
+	<tr>
+		<td><%= order.id %></td>
+		<td><%= order.buyer.id %></td>
+		<td>
+			<% order.order_items.each do |order_item| %>
+				<%= order_item.quantity %> x
+				<%= order_item.product.name %>
+			<% end %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+<br/>
+
+<p><%= link_to 'powrot', :back %></p>

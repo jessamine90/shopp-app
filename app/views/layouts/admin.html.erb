@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop</title>
+	<%= stylesheet_link_tag "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+</head>
+<body style="padding: 20px;">
+	<%= link_to 'Orders', admin_orders_path %> |
+	<%= link_to 'Categories', admin_categories_path %> |
+	<%= link_to 'Products', admin_products_path %>
+	<br />
+	<hr />
+	<%= yield %>
+</body>
+</html>

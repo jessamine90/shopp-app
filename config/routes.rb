@@ -6,6 +6,18 @@ ShopApp::Application.routes.draw do
   resources :categories
   resources :order_items
   
+  scope '/admin' do
+    devise_for :admin_users
+  end
+  
+  namespace :admin do
+    root :to => 'admin#index'
+ 	resources :orders
+ 	resources :categories
+ 	resources :products
+	match 'admin_root' => "admin#index"
+  end 
+  
   match '/categories/:id' => "categories#show"
   match 'cart' => "order#index"
   match 'cart/add/:id' => "order#add"

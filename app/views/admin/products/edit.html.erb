@@ -1,0 +1,27 @@
+<h2>Edytuj produkt</h2>
+
+<%= form_for(@product, :url => admin_product_path(@product)) do |f| %>
+ 	<div class="field">
+		<%= f.label :nazwa %><br />
+		<%= f.text_field :name %>
+ 	</div>
+ 	<div class="field">
+		<%= f.label :opis %><br />
+		<%= f.text_area :description %>
+ 	</div>
+ 	<div class="field">
+		<%= f.label :cena_w_groszach %><br />
+		<%= f.text_field :price %>
+ 	</div>
+ 	<div class="field">
+		<%= f.label :kategoria %><br />
+		<%= collection_select(:product, :category_id, @categories, :id, :name, {:prompt => false }) %>
+ 	</div>
+ 	<div class="actions">
+		<%= f.submit %>
+ 	</div>
+<% end %>
+
+
+
+<p><%= link_to 'powrot', admin_products_path %></p>
