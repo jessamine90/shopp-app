@@ -25,4 +25,10 @@ ShopApp::Application.routes.draw do
   match 'cart/checkout' => "order#checkout"
 
   match 'search/results' => "search#results"
+  
+  resource :spa
+  match 'spa' => 'spas#show'
+  match 'spa/get_categories' => "spas#get_categories"
+  match 'spa/get_products' => "spas#get_products"
+
 end
